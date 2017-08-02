@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>..\build\dist\IO.jar</jar>
+  <outfile>..\build\dist\IO.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest>.\IO.manifest</manifest>
+  <icon>..\src\com\ciphertechsolutions\io\ui\icons\ion.ico</icon>
+  <singleInstance>
+    <mutexName>CipherTechSolutions IO Mutex : {46dfbe27-5ed5-46cb-a90a-a82f53391e85}</mutexName>
+    <windowTitle></windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJdk</jdkPreference>
+    <runtimeBits>64</runtimeBits>
+    <maxHeapSize>6000</maxHeapSize>
+  </jre>
+  <versionInfo>
+    <fileVersion>0.9.0.0</fileVersion>
+    <txtFileVersion>0.9</txtFileVersion>
+    <fileDescription>Open Source Disk Imaging and Triage</fileDescription>
+    <copyright>2017</copyright>
+    <productVersion>0.9.0.0</productVersion>
+    <txtProductVersion>0.9</txtProductVersion>
+    <productName>IO</productName>
+    <companyName>Cipher Tech Solutions, Inc.</companyName>
+    <internalName>IO</internalName>
+    <originalFilename>IO.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>

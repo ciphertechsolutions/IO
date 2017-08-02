@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="400.0" maxWidth="560.0" minHeight="400.0" minWidth="560.0" prefHeight="400.0" prefWidth="560.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ciphertechsolutions.io.ui.SelectDeviceController">
+   <children>
+      <Button fx:id="selectButton" layoutX="270.0" layoutY="360.0" maxHeight="25.0" minHeight="25.0" minWidth="125.0" mnemonicParsing="false" onAction="#onSelectDevice" prefHeight="25.0" prefWidth="125.0" text="Begin Imaging" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="165.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="cancelButton" layoutX="200.0" layoutY="360.0" maxHeight="25.0" maxWidth="59.0" minHeight="25.0" minWidth="59.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="59.0" text="Cancel" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="200.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Button>
+      <Label layoutX="15.0" layoutY="15.0" maxHeight="17.0" maxWidth="125.0" minHeight="17.0" minWidth="125.0" prefHeight="17.0" prefWidth="125.0" text="Select Device:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <ListView fx:id="diskListView" layoutX="15.0" layoutY="40.0" minHeight="289.0" minWidth="535.0" prefHeight="289.0" prefWidth="535.0" styleClass="listview-box" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="40.0" />
+
+      <Label id="devicesLoadingLabel" fx:id="devicesLoadingLabel" layoutX="25.0" layoutY="45.0" maxHeight="35.0" maxWidth="425.0" minHeight="35.0" minWidth="425.0" prefHeight="35.0" prefWidth="425.0" text="Loading..." AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="45.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

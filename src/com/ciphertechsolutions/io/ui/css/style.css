@@ -1,0 +1,67 @@
+.root 
+{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Univers";
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+    -fx-background-color: #3f3f3f;
+}
+
+.progress-bar { -fx-box-border: goldenrod; }
+.orange-bar { -fx-accent: orange; }
+
+.listview-box 
+{ 
+    -fx-font-size: 11pt;	
+    -fx-box-border: goldenrod;
+    -fx-background-color: #3f3f3f;
+}
+ 
+.choice-box
+{
+     -fx-font-size: 10pt;
+     -fx-text-fill: black; 
+}
+
+/* Button Style */
+ .button {
+    -fx-background-color: 
+        #ebebeb; /*#707070, */
+       /* linear-gradient(#fcfcfc, #f3f3f3), */
+       /* linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%); */
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0; /* 3,2,1; */
+    /* -fx-padding: 3 30 3 30; */
+    -fx-text-fill: black;
+    /* -fx-font-size: 14px; */
+}
+#devicesLoadingLabel 
+{
+    -fx-font-size: 18pt;
+    -fx-font-family: "Univers";
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-background-color: #3f3f3f;
+}
+
+#advancedOptionsButton 
+{
+    -fx-min-height: 30px;
+    -fx-min-width: 30px;
+    -fx-max-height: 30px;
+    -fx-max-width: 30px;
+    -fx-graphic: url("/com/ciphertechsolutions/io/ui/icons/settings.png");
+ 
+}
+
+#infoButton
+{
+    -fx-min-height: 30px;
+    -fx-min-width: 30px;
+    -fx-max-height: 30px;
+    -fx-max-width:30px;
+    -fx-graphic: url("/com/ciphertechsolutions/io/ui/icons/infoIcon.png");
+
+
+}

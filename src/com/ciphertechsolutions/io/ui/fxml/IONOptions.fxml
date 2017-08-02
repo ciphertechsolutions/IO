@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="400.0" minWidth="560.0" prefHeight="400.0" prefWidth="560.0" styleClass="root " xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ciphertechsolutions.io.ui.AdvancedOptionsController">
+   <children>
+      <Label layoutX="15.0" layoutY="14.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Select Config:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="49.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Save Location:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="84.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Compression Type:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="84.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="119.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Description:" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="119.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="154.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Examiner Name:" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="154.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="189.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Case Number:" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="189.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="224.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Evidence Number:" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="224.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="255.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Notes:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="364.0" maxHeight="17.0" maxWidth="115.0" minHeight="17.0" minWidth="115.0" prefHeight="17.0" prefWidth="115.0" text="Config Name:" textFill="WHITE" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <ChoiceBox fx:id="selectConfigDDL" layoutX="140.0" layoutY="10.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="275.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="saveLocationField" layoutX="140.0" layoutY="45.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" onAction="#openDirectoryChooser" onMouseClicked="#openDirectoryChooser" prefHeight="25.0" prefWidth="275.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <ChoiceBox fx:id="compressionTypeDDL" layoutX="140.0" layoutY="80.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="275.0" style="-fx-text-fill: black;" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="descriptionField" layoutX="140.0" layoutY="115.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" prefHeight="25.0" prefWidth="275.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextField>
+      <TextField fx:id="examinerNameField" layoutX="140.0" layoutY="150.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" prefHeight="25.0" prefWidth="275.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextField>
+      <TextField fx:id="caseNumberField" layoutX="140.0" layoutY="188.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" prefHeight="25.0" prefWidth="275.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextField>
+      <TextField fx:id="evidenceNumberField" layoutX="140.0" layoutY="220.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" prefHeight="25.0" prefWidth="275.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextField>
+      <TextArea fx:id="notesField" layoutX="140.0" layoutY="252.0" maxHeight="95.0" minHeight="25.0" minWidth="275.0" prefHeight="95.0" prefWidth="275.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextArea>
+      <TextField id="configName" fx:id="configNameField" layoutX="141.0" layoutY="359.0" maxHeight="25.0" minHeight="25.0" minWidth="275.0" prefHeight="25.0" prefWidth="275.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="145.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextField>
+      <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="425.0" layoutY="360.0" maxHeight="25.0" maxWidth="120.0" minHeight="25.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleOnSaveAction" prefHeight="25.0" prefWidth="120.0" text="Save &amp; Close" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></Button>
+      <Button fx:id="cancelButton" alignment="CENTER" contentDisplay="CENTER" layoutX="425.0" layoutY="325.0" maxHeight="25.0" maxWidth="120.0" minHeight="25.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleOnCancelAction" prefHeight="25.0" prefWidth="120.0" text="Cancel">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="425.0" layoutY="10.0" maxHeight="25.0" maxWidth="70.0" minHeight="25.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleOnDeleteAction" prefHeight="25.0" prefWidth="70.0" text="Delete" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

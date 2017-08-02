@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="560.0" minHeight="400.0" minWidth="560.0" prefHeight="400.0" prefWidth="560.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ciphertechsolutions.io.ui.MainScreenController">
+   <children>
+      <Button fx:id="advancedOptionsButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="473.0" layoutY="355.0" maxHeight="35.0" maxWidth="40.0" minHeight="35.0" minWidth="40.0" mnemonicParsing="false" onAction="#onAdvancedOptionsClick" prefHeight="35.0" prefWidth="40.0" textAlignment="CENTER" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="52.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="manuallySelectDeviceButton" alignment="CENTER" contentDisplay="CENTER" layoutX="185.0" layoutY="355.0" maxHeight="30.0" minHeight="30.0" minWidth="190.0" mnemonicParsing="false" onAction="#onManuallySelectDeviceClick" prefHeight="30.0" prefWidth="190.0" text="Manually Select Device" textAlignment="CENTER" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="185.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Button>
+      <Label fx:id="readyLabel" layoutX="15.0" layoutY="35.0" maxHeight="17.0" maxWidth="525.0" minHeight="17.0" minWidth="525.0" prefHeight="17.0" prefWidth="525.0" text="Status: Ready For Imaging" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="15.0" maxHeight="17.0" maxWidth="525.0" minHeight="17.0" minWidth="70.0" prefHeight="17.0" prefWidth="70.0" text="Writeblock:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="Arial Bold"  size="11.0" />
+         </font></Label>
+      <Label fx:id="writeblockStatus" layoutX="86.0" layoutY="14.0" maxHeight="17.0" maxWidth="454.0" minHeight="17.0" minWidth="454.0" prefHeight="17.0" prefWidth="454.0" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="Arial Bold"  size="11.0" />
+         </font></Label>
+      <Label id="connectMediaLabel" alignment="TOP_CENTER" layoutX="50.0" layoutY="150.0" maxHeight="28.0" maxWidth="460.0" minHeight="28.0" minWidth="460.0" prefHeight="28.0" prefWidth="460.0" text="CONNECT TARGET MEDIA TO ANY USB PORT" textAlignment="CENTER" textFill="LIME" textOverrun="CLIP" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Arial Bold"  size="20.0" />
+         </font>
+      </Label>
+      <Label id="imagingWillStartLabel" alignment="TOP_CENTER" layoutX="70.0" layoutY="178.0" maxHeight="28.0" maxWidth="415.0" minHeight="28.0" minWidth="415.0" prefHeight="28.0" prefWidth="415.0" text="[Imaging will start automatically]" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="178.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="infoButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="516.0" layoutY="355.0" maxHeight="35.0" maxWidth="40.0" minHeight="35.0" minWidth="40.0" mnemonicParsing="false" onAction="#onInfoClick" prefHeight="35.0" prefWidth="40.0" textAlignment="CENTER" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="400.0" maxWidth="560.0" minHeight="400.0" minWidth="560.0" prefHeight="400.0" prefWidth="560.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ciphertechsolutions.io.ui.ImagingController">
+   <children>
+      <ProgressBar fx:id="progressBar" layoutX="15.0" layoutY="362.0" maxHeight="23.0" minHeight="23.0" minWidth="541.0" prefHeight="23.0" prefWidth="541.0" progress="0.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <styleClass>
+            <String fx:value="orange-bar" />
+            <String fx:value="progress-bar" />
+         </styleClass></ProgressBar>
+      <Button fx:id="abortImagingButton" layoutX="415.0" layoutY="320.0" maxHeight="25.0" maxWidth="130.0" minHeight="25.0" minWidth="130.0" mnemonicParsing="false" onAction="#onAbortImagingClick" prefHeight="25.0" prefWidth="130.0" text="Abort Imaging" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Button>
+      <TextArea fx:id="outputTextArea" editable="false" layoutX="15.0" layoutY="15.0" minHeight="296.0" minWidth="530.0" prefHeight="296.0" prefWidth="530.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font></TextArea>
+      <Label fx:id="timeEstimateLabel" layoutX="15.0" layoutY="324.0" maxHeight="17.0" maxWidth="390.0" minHeight="17.0" minWidth="390.0" prefHeight="17.0" prefWidth="390.0" text="Estimated Time Remaining: 000000000000000000 seconds" textFill="WHITE" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font></Label>
+      <Button fx:id="returnButton" disable="true" layoutX="251.0" layoutY="319.0" mnemonicParsing="false" onAction="#onReturnClick" text="Return To Main" visible="false" >
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
