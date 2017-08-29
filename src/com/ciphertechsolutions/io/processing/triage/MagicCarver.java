@@ -52,7 +52,8 @@ public class MagicCarver extends TriageProcessorBase {
                         new byte[] { 0x47, 0x49, 0x46, 0x38, 0x39, 0x61 } });
         DEFAULT_MAGICS.put("GZIP header",
                 new byte[][] {
-                        new byte[] { 0x1F, (byte) 0x8B } });
+                        new byte[] { 0x1F, (byte) 0x8B, 0x08, 0x00 },
+                        new byte[] { 0x1F, (byte) 0x8B, 0x08, 0x08 } });
         DEFAULT_MAGICS.put("ISO header",
                 new byte[][] {
                         new byte[] { 0x43, 0x44, 0x30, 0x30, 0x31 } });
@@ -117,6 +118,7 @@ public class MagicCarver extends TriageProcessorBase {
 
     /**
      * Sole constructor.
+     * 
      * @param readSize The default size of chunks that will be passed to this carver, used for memory management purposes.
      */
     public MagicCarver(int readSize) {
@@ -171,14 +173,7 @@ public class MagicCarver extends TriageProcessorBase {
                     MapAndOrStrings result = map[toFind];
                     if (result != null) {
                         if (!result.strings.isEmpty()) {
-                            List<String> results = result.strings;
-                            List<Integer> offsets = result.stringOffsets;
-                            for (int resultIndex = 0; resultIndex < offsets.size(); resultIndex++) {
-                                if (results.get(resultIndex).equals("JPEG header")) {
-                                    getJpegData(toMatch, i, offsets, resultIndex);
-                                }
-                                resultMap.merge(results.get(resultIndex), new Integer(1), (A, B) -> A + 1);
-                            }
+                            recordResults(toMatch, i, result);
                         }
                         MapAndOrStrings[] newMap = result.byteMapping;
                         if (newMap != null) {
@@ -193,6 +188,26 @@ public class MagicCarver extends TriageProcessorBase {
             }
             else {
                 clear = true;
+            }
+        }
+    }
+
+    private void recordResults(byte[] toMatch, int i, MapAndOrStrings result) {
+        List<String> results = result.strings;
+        List<Integer> offsets = result.stringOffsets;
+        for (int resultIndex = 0; resultIndex < offsets.size(); resultIndex++) {
+            String resultName = results.get(resultIndex);
+            if (resultName.equals("JPEG header")) {
+                getJpegData(toMatch, i, offsets, resultIndex);
+            }
+            if (resultName.equals("BMP header")) {
+                if (toMatch.length >= i + 10 && toMatch[i + 5] == 0 && toMatch[i + 6] == 0 && toMatch[i + 7] == 0 &&
+                        toMatch[i + 8] == 0 && toMatch[i + 9] != 0) {
+                    resultMap.merge(results.get(resultIndex), new Integer(1), (A, B) -> A + 1);
+                }
+            }
+            else {
+                resultMap.merge(results.get(resultIndex), new Integer(1), (A, B) -> A + 1);
             }
         }
     }
@@ -232,8 +247,8 @@ public class MagicCarver extends TriageProcessorBase {
             e.printStackTrace();
         }
     }
-    
-    private boolean notEmptyGPS(String lat, String longGPS) {     
+
+    private boolean notEmptyGPS(String lat, String longGPS) {
         if (lat == null || longGPS == null || lat.isEmpty() || (lat.equals(emptyGPS) && longGPS.equals(emptyGPS))) {
             return false;
         }
@@ -242,6 +257,7 @@ public class MagicCarver extends TriageProcessorBase {
 
     /**
      * Avoids null Strings
+     * 
      * @param tag the questionable String
      * @return Empty String or the non-null String
      */
