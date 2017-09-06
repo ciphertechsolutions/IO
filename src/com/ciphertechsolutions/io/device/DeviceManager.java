@@ -308,17 +308,19 @@ public class DeviceManager {
             String volumeName = matchPattern(VOLUME_PATTERN, path);
             String partitionName = matchPattern(PARTITION_PATTERN, path);
             Volume volume = null;
-            for (Volume v : volumes) {
-                if (v.path.startsWith(volumeName)) {
-                    volume = v;
-                    break;
-                }
-            }
 
-            if (volume != null && volume.underlyingDisk != null) {
-                volume.underlyingDisk = partitionToDrive.get(partitionName);
-                volume.underlyingDisk.addVolume(volume);
-                volumeToDrive.put(volume, volume.underlyingDisk);
+            if (partitionToDrive.containsKey(partitionName)) {
+                for (Volume v : volumes) {
+                    if (v.path.startsWith(volumeName)) {
+                        volume = v;
+                        break;
+                    }
+                }
+                if (volume != null && volume.underlyingDisk == null) {
+                    volume.underlyingDisk = partitionToDrive.get(partitionName);
+                    volume.underlyingDisk.addVolume(volume);
+                    volumeToDrive.put(volume, volume.underlyingDisk);
+                }
             }
         }
 

@@ -15,7 +15,7 @@ public class InfoScreenController extends BaseController {
     @FXML
     private Label versionLabel;
 
-    private static final String ION_VERSION = "20170801.0"; // TODO: Make this update via build script?
+    private static final String ION_VERSION = "20170906.0"; // TODO: Make this update via build script?
 
     @Override
     protected void setTitle() {
@@ -44,6 +44,7 @@ public class InfoScreenController extends BaseController {
 
     /**
      * Get the location of this controller's corresponding FXML file.
+     * 
      * @return the FXML file location.
      */
     public static String getFXMLLocation() {
